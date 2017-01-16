@@ -1,6 +1,7 @@
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews
+        Options +Indexes +Includes +ExecCGI
     </IfModule>
 
     RewriteEngine On
@@ -18,4 +19,3 @@
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>
-Options +Indexes +Includes +ExecCGI
