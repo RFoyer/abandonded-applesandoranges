@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome', ['suggestedRatablesList' => 'Chicago Bears - My Rating: 1 2 3 4 5', 'alreadyRatedList' => 'Green Bay Packers - My Rating: 5 stars']);
 });
 
-//Route::resource('ratables', 'RatableController');
+Route::resource('ratables', 'RatableController');

@@ -15,7 +15,7 @@ class RatableController extends Controller
      */
     public function index()
     {
-        //
+        return view('welcome', ['suggestedRatablesList' => 'none', 'alreadyRatedList' => 'none']);
     }
 
     /**
