@@ -15,7 +15,8 @@ class RatableController extends Controller
      */
     public function index()
     {
-        return view('welcome', ['suggestedRatablesList' => 'none', 'alreadyRatedList' => 'none']);
+        $user = DB::table('users')->where('name', 'user1')->value('email');
+        return view('welcome', ['suggestedRatablesList' => $user, 'alreadyRatedList' => 'none']);
     }
 
     /**
