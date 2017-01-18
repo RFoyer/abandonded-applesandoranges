@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 use App\Http\Requests;
 
@@ -15,8 +16,8 @@ class RatableController extends Controller
      */
     public function index()
     {
-        $user = DB::table('users')->where('name', 'user1')->value('email');
-        return view('welcome', ['suggestedRatablesList' => $user, 'alreadyRatedList' => 'none']);
+        
+        
     }
 
     /**
