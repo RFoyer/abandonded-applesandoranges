@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('home', ['results' => '']);
+    return view('home');
     //return view('welcome', ['suggestedRatablesList' => 'Chicago Bears - My Rating: 1 2 3 4 5', 'alreadyRatedList' => 'Green Bay Packers - My Rating: 5 stars']);
 });
 
@@ -22,5 +22,5 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-//Route::get('search', 'SearchController@show');
+Route::get('search', 'SearchController@show');
 

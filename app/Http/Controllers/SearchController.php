@@ -6,10 +6,13 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\User;
+
 class SearchController extends Controller
 {
-    public function show(Request $request)
+    public function show()
     {
-        //return view('home', ['results' => $request->input('q')]);
+        //$data = User::where('name', 'user1')->value('email');
+        return view('home');
     }
 }
